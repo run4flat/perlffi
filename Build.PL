@@ -3,15 +3,12 @@ use warnings;
 use Module::Build;
 use Alien::FFCall;
 
-# Retrieve the Alien::FFCall configuration:
-my $alien = Alien::FFCall->new;
-
 # Add the WIN32 compiler flag, as appropriate
-my $compiler_flags = $alien->cflags();
+my $compiler_flags = Alien::FFCall->cflags();
 $compiler_flags .= ' -DWIN32' if $^O eq "MSWin32";
 
 # Add the specific libraries against which to link
-my $linker_flags = $alien->libs();
+my $linker_flags = Alien::FFCall->libs();
 
 # Create the build script:
 my $builder = Module::Build->new(
