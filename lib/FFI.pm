@@ -5,7 +5,7 @@ use warnings;
 
 use Alien::FFCall;
 
-our $VERSION = '1.04';
+our $VERSION = '1.04_01';
 
 require XSLoader;
 XSLoader::load('FFI');
@@ -137,21 +137,20 @@ Possibly, improve support for passing pointers to "native" types.
 
 =head1 LICENSE
 
-Substantial portions of the code for this module (the underlying FFI code) are
-licensed under the GNU General Public License. Under the terms of that
-license, my understanding is that this module has to be distrubuted under that
-same license.
-
-My personal preference would be to distribute this module under the same terms
-as Perl. However, I understand that this is not possible, given the licensing
-of the FFI code.
+The underlying library for this module is licensed under the GNU General Public
+License. At the moment, some of that code is still distributed with this module,
+so under the terms of that license, my understanding is that this module
+has to be distrubuted under that same license. However, the code from the
+original library is now distributed under L<Alien::FFCall>, so it is likely
+that the remaining code that is licensed under the GPL will be removed and
+future releases of this module will have a more relaxed license.
 
 =head1 STATUS
 
-This is a maintenance release. We will be releasing an updated but
-incompatible 2.00 version shortly.
-
-Subversion repository: L<http://svn.openfoundry.org/perlffi/trunk/>
+This is a maintenance release. The future of this module is not entirely
+certain at the moment, but you can see the latest development at
+L<https://github.com/run4flat/perlffi> and/or 
+L<https://github.com/gaal/perlffi>.
 
 =head1 AUTHOR
 
@@ -161,11 +160,12 @@ of L<FFI>.
 Mitchell Charity C<< <mcharity@vendian.org> >> and
 Reini Urban C<< <RURBAN@cpan.org> >> contributed fixes.
 
-Anatoly Vorobey C<< <avorobey@pobox.com> >> and Gaal Yahas C<<
-<gaal@forum2.org> >> are the current maintainers.
-
 David Mertens C<< <dcmertens.perl@gmail.com> >> created L<Alien::FFCall> and
 updated this module to use it.
+
+David Mertens C<< <dcmertens.perl@gmail.com> >>, Anatoly Vorobey
+C<< <avorobey@pobox.com> >> and Gaal Yahas C<< <gaal@forum2.org> >> are the
+current maintainers.
 
 =head1 SEE ALSO
 

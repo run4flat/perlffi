@@ -18,5 +18,11 @@ my $builder = Module::Build->new(
 	configure_requires => {
 		'Alien::FFCall' => 0,
 	},
+	meta_merge => {
+		resources  => {
+			repository => "http://github.com/run4flat/perlffi",
+			bugtracker => "http://github.com/run4flat/perlffi/issues",
+		},
+	},
 );
 $builder->create_build_script;
