@@ -5,7 +5,7 @@ use warnings;
 
 use Alien::FFCall;
 
-our $VERSION = '1.04_01';
+our $VERSION = '1.04_02';
 
 require XSLoader;
 XSLoader::load('FFI');
